@@ -1,14 +1,19 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Card, CardContent, Container } from '@material-ui/core';
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Card,
+  CardContent,
+  Container,
+} from "@material-ui/core";
 
 function LandingPage() {
   return (
     <div>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6">
-            Proyecto
-          </Typography>
+          <Typography variant="h6">Proyecto</Typography>
         </Toolbar>
       </AppBar>
       <Container maxWidth="md">
@@ -18,8 +23,8 @@ function LandingPage() {
               Sistema de Descarga Masiva de XML
             </Typography>
             <Typography variant="body2" component="p">
-              Este Proyecto: Descarga, Administra y Controla de Forma masiva tus XML Emitidos y Recibidos
-              directamente desde el portal del SAT.
+              Este Proyecto: Descarga, Administra y Controla de Forma masiva tus
+              XML Emitidos y Recibidos directamente desde el portal del SAT.
             </Typography>
           </CardContent>
         </Card>
@@ -27,5 +32,4 @@ function LandingPage() {
     </div>
   );
 }
-
 export default LandingPage;
