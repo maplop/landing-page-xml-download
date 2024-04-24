@@ -6,10 +6,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0",
   "eslintConfig": {
     "extends": "react-app"
   },
