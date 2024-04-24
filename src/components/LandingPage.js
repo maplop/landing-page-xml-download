@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Card,
-  CardContent,
-  Container,
-} from "@material-ui/core";
+import { Box, AppBar, Toolbar, Typography, Container, CardContent, Card } from "@mui/material";
+
 
 function LandingPage() {
   return (
-    <div>
+    <Box>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6">Proyecto</Typography>
@@ -29,7 +23,7 @@ function LandingPage() {
           </CardContent>
         </Card>
       </Container>
-    </div>
+    </Box>
   );
 }
 export default LandingPage;

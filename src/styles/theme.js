@@ -1,6 +1,13 @@
 import { createTheme } from "@mui/material"
 
 const theme = createTheme({
+  typography: {
+    fontFamily: [
+   'Metropolis', 
+   'sans-serif'
+    ].join(','),
+    fontSize: 16,
+  },
 palette: {
   primary: {
     main: '#722ED1',
