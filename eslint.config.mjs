@@ -11,6 +11,7 @@ export default [
       'import/no-unresolved': 'error',
       'react/jsx-uses-react': 'warn',
       'import/no-unused-modules': 'warn',
+      'no-unused-vars': 'error',
     },
   },
 
