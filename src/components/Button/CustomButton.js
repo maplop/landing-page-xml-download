@@ -20,4 +20,6 @@ const CustomBtn = styled(Button)(({ theme, isPrimary }) => ({
   textTransform: "none",
   border: `1px solid ${theme.palette.primary.main}`,
   borderRadius: 23,
+
+
 }));
