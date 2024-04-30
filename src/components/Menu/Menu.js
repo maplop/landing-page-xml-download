@@ -20,4 +20,7 @@ const MenuContainer = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: 40,
+  widthHug: "487px",
+  heightHug: "38px",
+
 }));
