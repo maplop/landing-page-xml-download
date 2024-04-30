@@ -1,4 +1,5 @@
 import { Button, styled } from "@mui/material";
+import PropTypes from "prop-types";
 
 const CustomButton = ({ name, variant = "primary" }) => {
   const isPrimary = variant === "primary";
@@ -11,15 +12,20 @@ const CustomButton = ({ name, variant = "primary" }) => {
     </CustomBtn>
   );
 };
+
+CustomButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  variant: PropTypes.string,
+};
+
 export default CustomButton;
 
-const CustomBtn = styled(Button)(({ theme, isPrimary }) => ({
+const CustomBtn = styled(Button)(({ theme }) => ({
   fontSize: 14,
   lineHeight: "100%",
   padding: "10px 24px",
   textTransform: "none",
+  maxHeight: 38,
   border: `1px solid ${theme.palette.primary.main}`,
   borderRadius: 23,
-
-
 }));
