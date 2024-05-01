@@ -38,7 +38,7 @@ const ContentSection = styled("div")(({}) => ({
   flexDirection: "column",
   gap: 24,
   textAlign: "center",
-  padding: "64px 0",
+  padding: "48px 0",
 }));
 
 const CardItemsWrapper = styled("div")(({}) => ({
