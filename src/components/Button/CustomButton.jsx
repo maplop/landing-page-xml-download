@@ -20,7 +20,7 @@ CustomButton.propTypes = {
 
 export default CustomButton;
 
-const CustomBtn = styled(Button)(({ theme }) => ({
+const CustomBtn = styled(Button)(({ theme, isPrimary }) => ({
   fontSize: 14,
   lineHeight: "100%",
   padding: "10px 24px",
@@ -28,4 +28,9 @@ const CustomBtn = styled(Button)(({ theme }) => ({
   maxHeight: 38,
   border: `1px solid ${theme.palette.primary.main}`,
   borderRadius: 23,
+  background: isPrimary ? theme.palette.primary.main : theme.palette.white.main,
+
+  ":hover": {
+    background: !isPrimary && theme.palette.primary.light,
+  },
 }));
