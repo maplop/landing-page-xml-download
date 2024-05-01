@@ -1,0 +1,47 @@
+export const cardInfo = [
+  {
+    plan: "Básico",
+    price: "GRATIS",
+    textInfo: "Las licencias solo se pueden activar en MiAdminXML 5.0",
+    buttonText: "Comprar licencia básica",
+    style: "primary",
+    textInfo2: null,
+    licenseOptions: [
+      "Descarga hasta 2,000 XML",
+      "Herramientas de dministración Básica",
+      "5 RFC y límite de 50 XML para visualización",
+      "Generación de PDF",
+      "Organización Automática de XML (NOM 151)",
+    ],
+  },
+  {
+    plan: "Plus",
+    price: "$1449",
+    textInfo: "Las licencias solo se pueden activar en MiAdminXML 5.0",
+    buttonText: "Comprar licencia plus",
+    style: "secondary",
+    textInfo2: "Todas las herramientas de la Licencia Básica y...",
+    licenseOptions: [
+      "Generación Masiva de PDF (Facturas, Nómina y Pagos)",
+      "Reporte de Nómina, Facturas, Complementos, Pagos, Conceptos y más",
+      "Módulo Administración 4.0 (Especial para CFDIs 4.0)",
+      "Servicio Técnico incluido",
+    ],
+  },
+  {
+    plan: "Pro",
+    price: "$2295",
+    textInfo: "Las licencias solo se pueden activar en MiAdminXML 5.0",
+    buttonText: "Comprar licencia pro",
+    style: "primary",
+    textInfo2: "Todas las herramientas de la Licencia Básica y...",
+    licenseOptions: [
+      "Generación de Carga Batch para DIOT",
+      "Recuperación Automática de paquetes autorizados",
+      "Acuses de Validación",
+      "Reporte de Validación",
+      "Herramienta de Conciliación Pagos vs PPD",
+      "Organización Automática de XML (NOM 151)",
+    ],
+  },
+];

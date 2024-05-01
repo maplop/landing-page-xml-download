@@ -21,7 +21,7 @@ const HeroContent = () => {
           <CustomButton name="Descargar MiAdminXML" />
         </Box>
       </InfoContainer>
-      <img src={heroImg} alt="hero image" />
+      <img src={heroImg} alt="hero-image" />
     </WrapperContent>
   );
 };
