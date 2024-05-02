@@ -5,7 +5,7 @@ import CustomButton from "../Button/CustomButton";
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <Logo size={52} />
+      <Logo size={42} />
       <CustomButton name="Comenzar gratis" variant="secondary" />
     </NavbarContainer>
   );
