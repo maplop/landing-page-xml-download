@@ -4,6 +4,7 @@ import SectionTwo from "./SectionTwo/SetionTwo";
 import SectionThree from "./SectionThree/SectionThree";
 import SectionFour from "./SectionFour/SectionFour";
 import SectionFive from "./SectionFive/SectionFive";
+import SectionSix from "./SectionSix/SectionSix";
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <SectionThree />
       <SectionFour />
       <SectionFive />
+      <SectionSix />
     </>
   );
 };
