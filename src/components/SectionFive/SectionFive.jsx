@@ -48,7 +48,7 @@ const TitleContainer = styled("div")(({}) => ({
 
 const ItemsContainer = styled("div")(({}) => ({
   display: "grid",
-  gridTemplateRows: "repeat(4, 1fr)",
+  gridTemplateRows: "repeat(3, 1fr)",
   gridTemplateColumns: "repeat(2, 1fr)",
   gap: 32,
 }));
