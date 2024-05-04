@@ -85,6 +85,7 @@ const ButtonsContainer = styled("div")(({}) => ({
   justifyContent: "space-between",
   alignItems: "center",
   gap: 24,
+  marginTop: 16,
 
   button: {
     width: "100%",
