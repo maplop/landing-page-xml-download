@@ -1,12 +1,6 @@
-import { Container, styled } from "@mui/material";
+import { Container } from "@mui/material";
 
 const SectionContainer = ({ children }) => {
-  return <SectionWrapper maxWidth="md">{children}</SectionWrapper>;
+  return <Container maxWidth="md">{children}</Container>;
 };
 export default SectionContainer;
-
-const SectionWrapper = styled(Container)(({}) => ({
-  "&.MuiContainer-root": {
-    padding: 0,
-  },
-}));

@@ -21,24 +21,49 @@ const HeroContent = () => {
           <CustomButton name="Descargar MiAdminXML" />
         </Box>
       </InfoContainer>
-      <img src={heroImg} alt="hero-image" />
+      <ImgContainer>
+        <img src={heroImg} alt="hero-image" style={{ objectFit: "contain" }} />
+      </ImgContainer>
     </WrapperContent>
   );
 };
 export default HeroContent;
 
-const WrapperContent = styled("div")(({}) => ({
+const WrapperContent = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   marginTop: 72,
+
+  [theme.breakpoints.down("lg")]: {
+    marginTop: 48,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    gap: 24,
+  },
 }));
 
-const InfoContainer = styled("div")(({}) => ({
+const InfoContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   gap: 32,
-  maxWidth: 472,
+  maxWidth: 372,
+
+  [theme.breakpoints.down("lg")]: {
+    gap: 24,
+  },
+
+  [theme.breakpoints.down("md")]: {
+    gap: 16,
+    maxWidth: 300,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    alignItems: "center",
+    maxWidth: "none",
+  },
 }));
 
 const Tag = styled("div")(({ theme }) => ({
@@ -54,6 +79,11 @@ const Tag = styled("div")(({ theme }) => ({
   fontSize: 16,
   fontWeight: 500,
   lineHeight: "24px",
+
+  [theme.breakpoints.down("lg")]: {
+    fontSize: 14,
+    lineHeight: "16px",
+  },
 }));
 
 const MainText = styled("h1")(({ theme }) => ({
@@ -62,11 +92,56 @@ const MainText = styled("h1")(({ theme }) => ({
   lineHeight: "normal",
   color: theme.palette.title.main,
   margin: 0,
+
+  [theme.breakpoints.down("lg")]: {
+    fontSize: 36,
+    fontWeight: 700,
+  },
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: 32,
+    fontWeight: 700,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    textAlign: "center",
+  },
 }));
 
-const SecondaryText = styled("p")(({}) => ({
+const SecondaryText = styled("p")(({ theme }) => ({
   fontSize: 16,
   fontWeight: 500,
   lineHeight: "24px",
   margin: 0,
+
+  [theme.breakpoints.down("lg")]: {
+    fontSize: 14,
+    lineHeight: "16px",
+  },
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: 12,
+    lineHeight: "16px",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    textAlign: "center",
+  },
+}));
+
+const ImgContainer = styled("div")(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+
+  img: {
+    [theme.breakpoints.down("lg")]: {
+      maxHeight: 350,
+    },
+
+    [theme.breakpoints.down("md")]: {
+      maxHeight: 250,
+    },
+  },
 }));

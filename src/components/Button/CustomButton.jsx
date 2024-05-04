@@ -33,4 +33,8 @@ const CustomBtn = styled(Button)(({ theme, isPrimary }) => ({
   ":hover": {
     background: !isPrimary && theme.palette.primary.light,
   },
+
+  [theme.breakpoints.down("lg")]: {
+    fontSize: 12,
+  },
 }));
