@@ -40,13 +40,22 @@ const SectionThree = () => {
                   text="Deja atrás las preocupaciones sobre la validez de tus comprobantes fiscales. Nuestra herramienta te permite verificar el estado SAT de manera sencilla y precisa."
                 />
               </CardContainer>
-              <Box>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 <CustomButton name="Obtenlo 30 días gratis" />
               </Box>
             </LeftColContent>
           </LeftCol>
           <RightCol>
             <RightArticle />
+            <Box
+              sx={{
+                display: { xs: "block", sm: "none" },
+                textAlign: "center",
+                mt: 3,
+              }}
+            >
+              <CustomButton name="Obtenlo 30 días gratis" />
+            </Box>
           </RightCol>
         </ContentSection>
       </SectionContainer>
@@ -60,10 +69,14 @@ const Wrapper = styled("div")(({ theme }) => ({
   padding: "32px 0",
 }));
 
-const ContentSection = styled("div")(({}) => ({
+const ContentSection = styled("div")(({ theme }) => ({
   display: "flex",
   gap: 32,
   padding: "32px 0",
+
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+  },
 }));
 
 const LeftCol = styled("div")(({}) => ({
@@ -81,12 +94,16 @@ const TitleContainer = styled("div")(({}) => ({
   textAlign: "center",
 }));
 
-const LeftColContent = styled("div")(({}) => ({
+const LeftColContent = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
   height: "100%",
+
+  [theme.breakpoints.down("md")]: {
+    gap: 16,
+  },
 }));
 
 const LeftColContentTitle = styled("div")(({ theme }) => ({
@@ -97,16 +114,26 @@ const LeftColContentTitle = styled("div")(({ theme }) => ({
   textAlign: "center",
 }));
 
-const CardContainer = styled("div")(({}) => ({
+const CardContainer = styled("div")(({ theme }) => ({
   display: "grid",
   gridTemplateRows: "1fr 1fr",
   gridTemplateColumns: "1fr 1fr",
   gap: 24,
+
+  [theme.breakpoints.down("md")]: {
+    gridTemplateColumns: "1fr",
+    gap: 16,
+  },
 }));
 
-const RightCol = styled("div")(({}) => ({
+const RightCol = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   maxWidth: 308,
+
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    maxWidth: "none",
+  },
 }));
