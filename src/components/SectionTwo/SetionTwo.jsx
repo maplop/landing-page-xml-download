@@ -39,9 +39,9 @@ const SectionTwo = () => {
                 </Text>
               </InfoItem>
             </Info>
-            <Box>
+            <ImgContainer>
               <img src={downloadXMLImage} alt="download-xml-image" />
-            </Box>
+            </ImgContainer>
           </InfoContainer>
         </ContentSection>
       </SectionContainer>
@@ -79,16 +79,28 @@ const TitleContainer = styled("div")(({}) => ({
   margin: "0 auto",
 }));
 
-const InfoContainer = styled("div")(({}) => ({
+const InfoContainer = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   gap: 46,
+
+  [theme.breakpoints.down("md")]: {
+    gap: 24,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column-reverse",
+  },
 }));
 
-const Info = styled("div")(({}) => ({
+const Info = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   gap: 24,
+
+  [theme.breakpoints.down("sm")]: {
+    gap: 16,
+  },
 }));
 
 const InfoTitle = styled("h3")(({ theme }) => ({
@@ -118,4 +130,12 @@ const Text = styled("p")(({ theme }) => ({
   fontWeight: 500,
   lineHeight: "24px",
   color: theme.palette.text.main,
+}));
+
+const ImgContainer = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    img: {
+      maxWidth: 360,
+    },
+  },
 }));
