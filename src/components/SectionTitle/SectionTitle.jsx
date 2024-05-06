@@ -17,4 +17,9 @@ const Title = styled("h1")(({ theme }) => ({
   fontWeight: 700,
   lineHeight: "40px",
   margin: 0,
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: 28,
+    fontWeight: 700,
+  },
 }));

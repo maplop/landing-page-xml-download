@@ -25,20 +25,34 @@ const CardItemWrapper = styled("div")(({ theme }) => ({
   border: `1px solid ${theme.palette.primary.main}`,
   padding: "16px 24px",
 
-  ":nth-child(1)": {
+  [theme.breakpoints.down("sm")]: {
+    borderRadius: 5,
+  },
+
+  "&:nth-child(1)": {
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
   },
 
-  ":nth-child(2)": {
+  "&:nth-child(2)": {
     backgroundColor: theme.palette.primary.light,
     borderWidth: "1px 0px",
     borderRadius: 0,
+
+    [theme.breakpoints.down("sm")]: {
+      border: `1px solid ${theme.palette.primary.main}`,
+      borderRadius: 5,
+    },
   },
 
-  ":last-child": {
+  "&:last-child": {
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
+
+    [theme.breakpoints.down("sm")]: {
+      border: `1px solid ${theme.palette.primary.main}`,
+      borderRadius: 5,
+    },
   },
 }));
 
@@ -48,4 +62,10 @@ const Text = styled("div")(({ theme }) => ({
   fontWeight: 500,
   lineHeight: "24px",
   color: theme.palette.text.main,
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: "16px",
+  },
 }));
