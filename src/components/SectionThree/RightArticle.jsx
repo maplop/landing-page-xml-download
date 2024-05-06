@@ -57,6 +57,14 @@ const ArticleContainer = styled("div")(({ theme }) => ({
   borderRadius: 8,
   border: `1px solid ${theme.palette.primary.main}`,
   background: theme.palette.primary.light,
+
+  [theme.breakpoints.down("md")]: {
+    height: "100%",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    padding: "24px 16px",
+  },
 }));
 
 const Text = styled("p")(({ theme }) => ({
