@@ -11,8 +11,10 @@ const SectionOne = () => {
   return (
     <SectionContainer>
       <ContentSection>
-        <SectionTitle title="¿Estás listo para dar un gran paso en tu trabajo?" />
-        <SectionSubtitle subtitle="MiAdminXML te desafía a evolucionar tu forma de trabajar en solo 30 días." />
+        <TitleContainer>
+          <SectionTitle title="¿Estás listo para dar un gran paso en tu trabajo?" />
+          <SectionSubtitle subtitle="MiAdminXML te desafía a evolucionar tu forma de trabajar en solo 30 días." />
+        </TitleContainer>
         <CardItemsWrapper>
           <CardItem
             icon={icon1}
@@ -41,7 +43,27 @@ const ContentSection = styled("div")(({}) => ({
   padding: "48px 0",
 }));
 
-const CardItemsWrapper = styled("div")(({}) => ({
+const TitleContainer = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: 12,
+  textAlign: "center",
+  maxWidth: 620,
+  margin: "0 auto",
+  textAlign: "center",
+
+  [theme.breakpoints.down("md")]: {
+    maxWidth: 500,
+  },
+}));
+
+const CardItemsWrapper = styled("div")(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
+
+  [theme.breakpoints.down("sm")]: {
+    gap: 8,
+    gridTemplateRows: "1fr",
+    gridTemplateColumns: "1fr",
+  },
 }));
