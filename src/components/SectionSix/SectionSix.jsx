@@ -1,7 +1,7 @@
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import SectionSubtitle from "../SectionSubtitle/SectionSubtitle";
-import { styled } from "@mui/material";
+import { styled, Box } from "@mui/material";
 import setUp from "../../assets/images/set-up.png";
 import { itemsInfo } from "./itemsInfo";
 import Item from "./Item";
@@ -11,15 +11,31 @@ const SectionSix = () => {
   return (
     <SectionContainer>
       <ContentSection>
+        <Box
+          sx={{
+            display: { xs: "block", sm: "none" },
+          }}
+        >
+          <TitleContainer>
+            <SectionTitle title="Reportes de Retenciones sin Límites" />
+            <SectionSubtitle subtitle="¿Te has preguntado cómo podrías simplificar la tediosa tarea de gestionar retenciones e información de pagos en tus comprobantes fiscales? MiAdminXML tiene la respuesta que necesitas." />
+          </TitleContainer>
+        </Box>
         <ImageContainer>
           <img src={setUp} alt="set up image" />
           <Square />
         </ImageContainer>
         <Content>
-          <TitleContainer>
-            <SectionTitle title="Reportes de Retenciones sin Límites" />
-            <SectionSubtitle subtitle="¿Te has preguntado cómo podrías simplificar la tediosa tarea de gestionar retenciones e información de pagos en tus comprobantes fiscales? MiAdminXML tiene la respuesta que necesitas." />
-          </TitleContainer>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+            }}
+          >
+            <TitleContainer>
+              <SectionTitle title="Reportes de Retenciones sin Límites" />
+              <SectionSubtitle subtitle="¿Te has preguntado cómo podrías simplificar la tediosa tarea de gestionar retenciones e información de pagos en tus comprobantes fiscales? MiAdminXML tiene la respuesta que necesitas." />
+            </TitleContainer>
+          </Box>
           <ItemContainer>
             {itemsInfo.map((info, index) => (
               <Item key={index} text={info} />
@@ -36,14 +52,37 @@ const SectionSix = () => {
 };
 export default SectionSix;
 
-const ContentSection = styled("div")(({}) => ({
+const ContentSection = styled("div")(({ theme }) => ({
   display: "flex",
   gap: 94,
   padding: "48px 0",
+
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    gap: 24,
+  },
 }));
 
-const ImageContainer = styled("div")(({}) => ({
+const ImageContainer = styled("div")(({ theme }) => ({
   position: "relative",
+  display: "flex",
+  width: 360,
+  height: 360,
+
+  [theme.breakpoints.down("md")]: {
+    width: 280,
+    height: 280,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    img: {
+      width: "100%",
+    },
+    borderRadius: 8,
+    overflow: "hidden",
+    width: "100%",
+    height: "auto",
+  },
 }));
 
 const Square = styled("div")(({ theme }) => ({
@@ -55,6 +94,15 @@ const Square = styled("div")(({ theme }) => ({
   background: "rgba(114, 46, 209, 0.60)",
   filter: "blur(25px)",
   zIndex: -1,
+
+  [theme.breakpoints.down("md")]: {
+    width: 280,
+    height: 280,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
 }));
 
 const Content = styled("div")(({}) => ({
@@ -63,7 +111,7 @@ const Content = styled("div")(({}) => ({
   justifyContent: "space-between",
 }));
 
-const TitleContainer = styled("div")(({}) => ({
+const TitleContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   gap: 12,
@@ -71,6 +119,10 @@ const TitleContainer = styled("div")(({}) => ({
   maxWidth: 670,
   margin: "0 auto",
   textAlign: "start",
+
+  [theme.breakpoints.down("sm")]: {
+    textAlign: "center",
+  },
 }));
 
 const ItemContainer = styled("div")(({}) => ({
