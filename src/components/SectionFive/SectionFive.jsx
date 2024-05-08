@@ -46,9 +46,15 @@ const TitleContainer = styled("div")(({}) => ({
   margin: "0 auto",
 }));
 
-const ItemsContainer = styled("div")(({}) => ({
+const ItemsContainer = styled("div")(({ theme }) => ({
   display: "grid",
   gridTemplateRows: "repeat(3, 1fr)",
   gridTemplateColumns: "repeat(2, 1fr)",
   gap: 32,
+
+  [theme.breakpoints.down("sm")]: {
+    gridTemplateRows: "repeat(6, 1fr)",
+    gridTemplateColumns: "1fr",
+    gap: 16,
+  },
 }));
