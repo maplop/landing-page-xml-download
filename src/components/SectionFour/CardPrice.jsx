@@ -69,6 +69,7 @@ const CardContainer = styled("div")(({ theme }) => ({
   border: `1px solid ${theme.palette.primary.main}`,
   background: theme.palette.white.main,
   boxShadow: "0px 3px 8px 0px rgba(0, 0, 0, 0.24)",
+  minWidth: 240,
 
   ":nth-child(2)": {
     background:
@@ -122,10 +123,14 @@ const ButtonContainer = styled("div")(({}) => ({
 const TextInfo = styled("p")(({ theme, isPrimary }) => ({
   margin: 0,
   fontSize: 12,
-  fontWeight: 300,
-  lineHeight: "normal",
+  fontWeight: 500,
+  lineHeight: "12px",
   color: isPrimary ? theme.palette.text.main : theme.palette.primary.light,
   textAlign: "start",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 10,
+  },
 }));
 
 const PlanOptions = styled("div")(({}) => ({
@@ -148,7 +153,7 @@ const ItemContainer = styled("div")(({}) => ({
 
 const ItemText = styled("p")(({ theme, isPrimary }) => ({
   fontSize: 14,
-  fontWeight: 400,
+  fontWeight: 500,
   lineHeight: "16px",
   margin: 0,
   color: isPrimary ? theme.palette.text.main : theme.palette.primary.light,

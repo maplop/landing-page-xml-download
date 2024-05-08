@@ -53,8 +53,13 @@ const TitleContainer = styled("div")(({}) => ({
   margin: "0 auto",
 }));
 
-const CardPriceContainer = styled("div")(({}) => ({
+const CardPriceContainer = styled("div")(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
   gap: 16,
+
+  [theme.breakpoints.down("md")]: {
+    overflowX: "scroll",
+    scrollBehavior: "smooth",
+  },
 }));
