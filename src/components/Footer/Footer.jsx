@@ -76,19 +76,29 @@ const FooterContainer = styled("footer")(({ theme }) => ({
   marginTop: 64,
 }));
 
-const FooterContent = styled("div")(({}) => ({
+const FooterContent = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   gap: 32,
+
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+  },
 }));
 
-const LeftCol = styled("div")(({}) => ({
+const LeftCol = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   gap: 24,
   maxWidth: 210,
+
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "none",
+
+    gap: 16,
+  },
 }));
 
 const Description = styled("p")(({ theme }) => ({
@@ -116,6 +126,10 @@ const ContactContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   gap: 32,
+
+  [theme.breakpoints.down("sm")]: {
+    gap: 16,
+  },
 }));
 
 const ContactTitle = styled("p")(({ theme }) => ({
@@ -127,17 +141,28 @@ const ContactTitle = styled("p")(({ theme }) => ({
   textAlign: "center",
 }));
 
-const Contact = styled("div")(({}) => ({
+const Contact = styled("div")(({ theme }) => ({
   display: "grid",
   gridAutoRows: "1fr 1fr",
   gridTemplateColumns: "1fr 1fr",
   rowGap: 24,
+
+  [theme.breakpoints.down("md")]: {
+    gridAutoRows: "repeat(4, 1fr)",
+    gridTemplateColumns: "1fr",
+    rowGap: 16,
+  },
 }));
 
 const Separator = styled("hr")(({ theme }) => ({
   width: "100%",
-  color: theme.palette.primary.main,
+  background: theme.palette.primary.main,
   height: 2,
+  borderStyle: "none",
+
+  [theme.breakpoints.down("sm")]: {
+    height: 1,
+  },
 }));
 
 const TermsPoliciesContainer = styled("div")(({}) => ({
