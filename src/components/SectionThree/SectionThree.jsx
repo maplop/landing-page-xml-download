@@ -28,16 +28,16 @@ const SectionThree = () => {
                   text="Deja atrás las preocupaciones sobre la validez de tus comprobantes fiscales. Nuestra herramienta te permite verificar el estado SAT de manera sencilla y precisa."
                 />
                 <CardItem
-                  title="Validación de Estado SAT"
-                  text="Deja atrás las preocupaciones sobre la validez de tus comprobantes fiscales. Nuestra herramienta te permite verificar el estado SAT de manera sencilla y precisa."
+                  title="Generación de PDF Masivos"
+                  text="¿Necesitas convertir múltiples XML en PDF? MiAdminXML lo hace en cuestión de segundos, ahorrándote tiempo valioso."
                 />
                 <CardItem
-                  title="Validación de Estado SAT"
-                  text="Deja atrás las preocupaciones sobre la validez de tus comprobantes fiscales. Nuestra herramienta te permite verificar el estado SAT de manera sencilla y precisa."
+                  title="Verifica Series"
+                  text=" Evita errores en tus documentos fiscales al asegurarte de que las series sean coherentes y estén en orden."
                 />
                 <CardItem
-                  title="Validación de Estado SAT"
-                  text="Deja atrás las preocupaciones sobre la validez de tus comprobantes fiscales. Nuestra herramienta te permite verificar el estado SAT de manera sencilla y precisa."
+                  title="Lector de Complementos"
+                  text="Simplifica la gestión de los complementos asociados a tus facturas y ahorra tiempo valioso."
                 />
               </CardContainer>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>

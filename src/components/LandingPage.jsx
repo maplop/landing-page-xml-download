@@ -6,6 +6,7 @@ import SectionFour from "./SectionFour/SectionFour";
 import SectionFive from "./SectionFive/SectionFive";
 import SectionSix from "./SectionSix/SectionSix";
 import Footer from "./Footer/Footer";
+import Menu from "./Menu/Menu";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
       <SectionFive />
       <SectionSix />
       <Footer />
+      <Menu />
     </>
   );
 };
