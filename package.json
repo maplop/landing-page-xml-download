@@ -1,0 +1,63 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My React App",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.15.15",
+    "axios": "^1.6.8",
+    "eslint-config-react-app": "^7.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
+    "react-redux": "^9.1.1",
+    "react-router-dom": "^6.22.3",
+    "redux": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@eslint/js": "^9.1.1",
+    "eslint": "^9.1.1",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0",
+    "jsdoc": "^4.0.2",
+    "react-scripts": "5.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
