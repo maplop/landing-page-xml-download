@@ -8,7 +8,7 @@ import RightArticle from "./RightArticle";
 
 const SectionThree = () => {
   return (
-    <Wrapper>
+    <Wrapper id="section-three">
       <SectionContainer>
         <ContentSection>
           <LeftCol>

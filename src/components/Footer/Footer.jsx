@@ -11,7 +11,7 @@ import Email from "./Icons/Email";
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <SectionContainer>
         <FooterContent>
           <LeftCol>

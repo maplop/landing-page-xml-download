@@ -10,7 +10,7 @@ import CustomButton from "../Button/CustomButton";
 const SectionSix = () => {
   return (
     <SectionContainer>
-      <ContentSection>
+      <ContentSection id="section-six">
         <Box
           sx={{
             display: { xs: "block", sm: "none" },

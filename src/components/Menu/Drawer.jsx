@@ -7,11 +7,11 @@ const Drawer = ({ isMenuOpen, handleIsMenuOpen }) => {
     <DrawerContainer isMenuOpen={isMenuOpen}>
       <DrawerContent>
         {menuItems.map((item, index) => (
-          <MenuItem key={index}>
+          <MenuItem key={index} onClick={() => handleIsMenuOpen()}>
             <Link href={item.link}>{item.label}</Link>
           </MenuItem>
         ))}
-        <CloseBtn handleIsMenuOpen={() => handleIsMenuOpen()}></CloseBtn>
+        <CloseBtn handleIsMenuOpen={() => handleIsMenuOpen()} />
       </DrawerContent>
     </DrawerContainer>
   );

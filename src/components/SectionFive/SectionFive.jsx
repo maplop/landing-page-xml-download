@@ -14,7 +14,7 @@ import { itemsInfo } from "./itemsInfo";
 const SectionFive = () => {
   return (
     <SectionContainer>
-      <ContentSection>
+      <ContentSection id="section-five">
         <TitleContainer>
           <SectionTitle title=" Conciliación de Pagos Simplificada: ¡Un Clic y Listo!" />
           <SectionSubtitle subtitle=" Conozca las principales bondades que ofrece MiAdminXML" />

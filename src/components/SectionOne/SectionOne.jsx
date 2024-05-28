@@ -10,7 +10,7 @@ import icon3 from "../../assets/images/s1-icon3.png";
 const SectionOne = () => {
   return (
     <SectionContainer>
-      <ContentSection>
+      <ContentSection id="section-one">
         <TitleContainer>
           <SectionTitle title="¿Estás listo para dar un gran paso en tu trabajo?" />
           <SectionSubtitle subtitle="MiAdminXML te desafía a evolucionar tu forma de trabajar en solo 30 días." />

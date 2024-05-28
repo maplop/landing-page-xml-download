@@ -7,7 +7,7 @@ import StarIcon from "./StarIcon";
 
 const SectionTwo = () => {
   return (
-    <Wrapper>
+    <Wrapper id="section-two">
       <Background />
       <SectionContainer>
         <ContentSection>

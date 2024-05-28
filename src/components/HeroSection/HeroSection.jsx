@@ -5,7 +5,7 @@ import { styled } from "@mui/material";
 
 const HeroSection = () => {
   return (
-    <Wrapper>
+    <Wrapper id="start">
       <SectionContainer>
         <SectionContent>
           <Navbar />

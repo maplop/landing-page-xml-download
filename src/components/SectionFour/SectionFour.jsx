@@ -10,7 +10,7 @@ const SectionFour = () => {
 
   return (
     <SectionContainer>
-      <ContentSection>
+      <ContentSection id="section-four">
         <TitleContainer>
           <SectionTitle title="Listado de precios de MiAdminXML" />
           <SectionSubtitle

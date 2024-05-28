@@ -1,34 +1,34 @@
 export const menuItems = [
   {
     label: "Start",
-    link: "#",
+    link: "#start",
   },
   {
     label: "Section One",
-    link: "#",
+    link: "#section-one",
   },
   {
     label: "Section Two",
-    link: "#",
+    link: "#section-two#",
   },
   {
     label: "Section Three",
-    link: "#",
+    link: "#section-three",
   },
   {
     label: "Section Four",
-    link: "#",
+    link: "#section-four",
   },
   {
     label: "Section Five",
-    link: "#",
+    link: "#section-five",
   },
   {
     label: "Section Six",
-    link: "#",
+    link: "#section-six",
   },
   {
     label: "Footer",
-    link: "#",
+    link: "#footer",
   },
 ];
